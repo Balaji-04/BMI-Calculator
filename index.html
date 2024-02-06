@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI Calculator</title>
+    <style>
+      body {
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        background-image: linear-gradient(
+          180deg,
+          rgb(205, 220, 91),
+          rgb(57, 220, 123)
+        );
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        background-image: linear-gradient(
+          180deg,
+          rgb(201, 255, 190),
+          rgb(57, 220, 123)
+        );
+        width: 350px;
+        /* max-height: 139px; */
+        padding: 25px;
+        transform: skew(-10deg);
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15);
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+      .type-box {
+        border-radius: 4px;
+        border: none;
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15);
+      }
+      button {
+        background-color: rgb(255, 255, 255);
+        border: none;
+        width: 120px;
+        height: 36px;
+        border-radius: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+        transition: margin-top 0.15s, margin-left 0.15s, box-shadow 0.15s;
+      }
+      button:active {
+        margin-top: 2px;
+        margin-left: 2px;
+        box-shadow: none;
+      }
+      input {
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <form
+          id="bmiform"
+          onsubmit="calculateBMI();return false"
+          name="bmi_collection"
+        >
+          <h1>BMI Calculator</h1>
+          <g>
+            <label for="weight">Weight: &nbsp;</label>
+            <input
+              type="text"
+              id="weight"
+              placeholder="in KG"
+              class="type-box"
+            /> </g
+          ><br />
+          <g>
+            <label for="height">Height: &nbsp;</label>
+            <input
+              type="text"
+              id="height"
+              placeholder="in cm"
+              class="type-box"
+            />
+          </g>
+          <g
+            ><br />
+            <button type="submit">Submit</button>
+          </g>
+          <g>
+            <p class="output"></p>
+          </g>
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
